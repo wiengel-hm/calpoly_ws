@@ -1,0 +1,3 @@
+[submodule "src/line_follower"]
+	path = src/line_follower
+	url = git@github.com:wiengel-hm/line_follower.git
