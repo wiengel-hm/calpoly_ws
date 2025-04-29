@@ -4,3 +4,6 @@
 [submodule "src/controller"]
         path = src/controller
         url = https://github.com/wiengel-hm/controller.git
+[submodule "src/run_yolo"]
+	path = src/run_yolo
+	url = https://github.com/wiengel-hm/run_yolo.git
