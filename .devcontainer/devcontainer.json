@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the 
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "MXCK2 Workspace",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+
+	// Set the working directory inside the container
+	"workspaceFolder": "/mxck2_ws",
+
+	// Mount the local folder into the container
+	"workspaceMount": "source=/home/mxck/remove_me/calpoly_ws,target=/mxck2_ws,type=bind",
+
+	// Run container in privileged mode with NVIDIA CUDA support
+	"runArgs": [
+		"--privileged",
+		"--gpus=all",
+		"--runtime=nvidia",
+		"--env=NVIDIA_VISIBLE_DEVICES=all",
+		"--env=NVIDIA_DRIVER_CAPABILITIES=all",
+		"--network=host"
+	],
+	"mounts": [
+		"source=/dev,target=/dev,type=bind"
+	],
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}
