@@ -1,2 +1,8 @@
 # calpoly_ws
-ROS 2 Workspace managing project packages using Git submodules.
+
+Clone the repository including all submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/wiengel-hm/calpoly_ws.git
+```
+
