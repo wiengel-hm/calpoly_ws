@@ -11,7 +11,11 @@
 	"workspaceFolder": "/mxck2_ws",
 
 	// Mount the local folder into the container
-	"workspaceMount": "source=/home/mxck/remove_me/calpoly_ws,target=/mxck2_ws,type=bind",
+	"workspaceMount": "source=/home/students/alpha_ws,target=/mxck2_ws,type=bind",
+
+	"containerEnv": {
+		"ROBOT_NAMESPACE": "alpha" // Set your ros2 namespace here
+	},
 
 	// Run container in privileged mode with NVIDIA CUDA support
 	"runArgs": [
