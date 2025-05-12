@@ -17,6 +17,9 @@ RUN git config --global credential.helper store && \
     git config --global user.name "wiengel-hm" && \
     git config --global user.email "wengel@hm.edu"
 
+# Mark all Git repositories as safe (needed in Docker since the repo is mounted and owned by a different user)
+RUN git config --global --add safe.directory '*'
+
 # Copy bash aliases and set up for root
 COPY .bash_aliases /root/.bash_aliases
 RUN echo 'source /root/.bash_aliases' >> /root/.bashrc
